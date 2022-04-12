@@ -81,7 +81,9 @@
       </li>
     </ul>
     <div class="cart">
-      <i class="fa-solid fa-bag-shopping"></i>
+      <router-link to="/cart"
+        ><i class="fa-solid fa-bag-shopping"></i
+      ></router-link>
       <div>
         <p class="cart__price">{{ cost }} zł</p>
         <p class="cart__items">{{ items }}</p>

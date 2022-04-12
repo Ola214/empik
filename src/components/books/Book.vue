@@ -19,6 +19,7 @@
         <p class="book__badge">Odbiór w salonie 0 zł</p>
 
         <button @click="addToCart">Dodaj do koszyka</button>
+        <button @click="addToCart">Szczegóły</button>
       </div>
     </div>
   </div>
