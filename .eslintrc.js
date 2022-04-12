@@ -21,6 +21,7 @@ module.exports = {
     "comma-dangle": 0,
     "object-curly-spacing": "off",
     "import/extensions": ["error", "ignorePackages", { "vue": "always" }],
+    "prefer-destructuring": 0,
   },
   overrides: [
     {

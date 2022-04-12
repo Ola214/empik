@@ -83,12 +83,33 @@
     <div class="cart">
       <i class="fa-solid fa-bag-shopping"></i>
       <div>
-        <p class="cart__price">0,00zł</p>
-        <p class="cart__items">Pusty koszyk</p>
+        <p class="cart__price">{{ cost }} zł</p>
+        <p class="cart__items">{{ items }}</p>
       </div>
     </div>
   </div>
 </template>
+<script>
+export default {
+  computed: {
+    items() {
+      const length = this.$store.getters.getBooks.length;
+      if (length !== 0) {
+        return length;
+      }
+      return "Pusty koszyk";
+    },
+    cost() {
+      const books = this.$store.getters.getBooks;
+      let allCost = parseFloat("0.00");
+      books.forEach((book) => {
+        allCost += parseFloat(book.value.new_price.replace(/,/, "."));
+      });
+      return allCost;
+    },
+  },
+};
+</script>
 
 <style lang="scss">
 @import "node_modules/bootstrap/scss/bootstrap.scss";
