@@ -175,7 +175,13 @@ export default {
       const itemIndex = this.books.findIndex(({ id }) => id === bookId);
       const bookToAdd = this.books[itemIndex];
 
-      this.$store.dispatch("addToCart", { value: bookToAdd });
+      if (bookToAdd.amount) {
+        bookToAdd.amount = bookToAdd.amount + 1;
+        this.$store.dispatch("editAmount", bookToAdd.id, bookToAdd.amount);
+      } else {
+        bookToAdd.amount = 1;
+        this.$store.dispatch("addToCart", { value: bookToAdd });
+      }
     },
     addToCartOnly(bookId, bookName, bookSubCategory) {
       this.categories.forEach((x, index) => {

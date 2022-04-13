@@ -15,6 +15,7 @@
         :sub_category="book.value.sub_category"
         :format="book.value.format"
         :image="book.value.image"
+        :amount="book.value.amount"
       ></cart-item>
     </div>
   </div>

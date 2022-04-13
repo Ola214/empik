@@ -23,7 +23,10 @@ module.exports = {
     "import/extensions": ["error", "ignorePackages", { "vue": "always" }],
     "prefer-destructuring": 0,
     "vue/no-unused-components": 0,
-    "no-unused-vars": 0
+    "no-unused-vars": 0,
+    "prefer-arrow-callback": 0,
+    "operator-assignment": 0,
+    "arrow-parens": 0,
   },
   overrides: [
     {

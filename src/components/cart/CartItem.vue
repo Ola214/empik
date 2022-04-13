@@ -12,7 +12,10 @@
     </div>
     <div class="cart-item__bottom">
       <div class="cart-item__left">
-        <i class="fa-solid fa-basket-shopping"></i>
+        <button @click="deleteBook">
+          <i class="fa-solid fa-basket-shopping"></i>
+        </button>
+        <span>{{ amount }}</span>
       </div>
       <div class="cart-item__right">
         <span class="old_price">{{ old_price }} zł</span> &nbsp;
@@ -24,6 +27,7 @@
 <script>
 export default {
   props: [
+    "id",
     "name",
     "author",
     "category",
@@ -32,7 +36,13 @@ export default {
     "old_price",
     "new_price",
     "image",
+    "amount",
   ],
+  methods: {
+    deleteBook() {
+      this.$store.dispatch("removeFromCart", { value: this.id });
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -67,6 +77,11 @@ export default {
     align-items: center;
     .cart-item__left {
       font-size: 2rem;
+
+      button {
+        border: none;
+        background-color: white;
+      }
     }
     .cart-item__right {
       .old_price {
