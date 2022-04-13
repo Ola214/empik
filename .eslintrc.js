@@ -27,6 +27,7 @@ module.exports = {
     "prefer-arrow-callback": 0,
     "operator-assignment": 0,
     "arrow-parens": 0,
+    "no-trailing-spaces": 0
   },
   overrides: [
     {

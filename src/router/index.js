@@ -2,6 +2,8 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Books from "../components/books/Books.vue";
 import Main from "../components/Main.vue";
 import Cart from "../components/cart/Cart.vue";
+import Login from "../components/auth/Login.vue";
+import Register from "../components/auth/Register.vue";
 
 const routes = [
   {
@@ -17,7 +19,15 @@ const routes = [
   },
   {
     path: "/cart",
-    components: {default: Cart}
+    components: {default: Cart},
+  }, 
+  {
+    path: "/login",
+    components: {default: Login},
+  },
+  {
+    path: "/register",
+    components: {default: Register},
   }
 ];
 

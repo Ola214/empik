@@ -89,6 +89,10 @@
         <p class="cart__items">{{ items }}</p>
       </div>
     </div>
+    <div class="auth">
+      <router-link to="/login">Zaloguj się</router-link>
+      <router-link to="/register">Zarejestruj się </router-link>
+    </div>
   </div>
 </template>
 <script>
