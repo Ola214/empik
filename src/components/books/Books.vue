@@ -176,8 +176,6 @@ export default {
       const bookToAdd = this.books[itemIndex];
 
       this.$store.dispatch("addToCart", { value: bookToAdd });
-
-      alert(this.$store.getters.getBooks);
     },
     addToCartOnly(bookId, bookName, bookSubCategory) {
       this.categories.forEach((x, index) => {

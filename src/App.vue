@@ -15,5 +15,15 @@ export default {
   components: {
     TheNavigation,
   },
+  provide() {
+    return {
+      appName: this.appName,
+    };
+  },
+  data() {
+    return {
+      appName: "Empik",
+    };
+  },
 };
 </script>

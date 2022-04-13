@@ -22,6 +22,8 @@ module.exports = {
     "object-curly-spacing": "off",
     "import/extensions": ["error", "ignorePackages", { "vue": "always" }],
     "prefer-destructuring": 0,
+    "vue/no-unused-components": 0,
+    "no-unused-vars": 0
   },
   overrides: [
     {

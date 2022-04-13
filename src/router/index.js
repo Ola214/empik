@@ -1,19 +1,24 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
-import Books from '../components/books/Books.vue';
-import Main from '../components/Main.vue';
+import { createRouter, createWebHashHistory } from "vue-router";
+import Books from "../components/books/Books.vue";
+import Main from "../components/Main.vue";
+import Cart from "../components/cart/Cart.vue";
 
 const routes = [
   {
-    path: '/', redirect: '/main'
+    path: "/", redirect: "/main"
   },
   {
-    path: '/books',
+    path: "/books",
     components: {default: Books},
   },
   {
-    path: '/main',
+    path: "/main",
     components: {default: Main},
   },
+  {
+    path: "/cart",
+    components: {default: Cart}
+  }
 ];
 
 const router = createRouter({
