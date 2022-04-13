@@ -3,7 +3,7 @@
     <div class="cart-wrapper">
       <p>Zamówienia od {{ appName }}</p>
       <cart-item
-        v-for="book in books_cart"
+        v-for="book in getBooks"
         :key="book.value.id"
         :id="book.value.id"
         :name="book.value.name"
@@ -21,6 +21,7 @@
   </div>
 </template>
 <script>
+import { mapGetters } from "vuex";
 import CartItem from "./CartItem.vue";
 
 export default {
@@ -32,9 +33,10 @@ export default {
     return {};
   },
   computed: {
-    books_cart() {
-      return this.$store.getters.getBooks;
-    },
+    // getBooks() {
+    //   return this.$store.getters.getBooks;
+    // },
+    ...mapGetters(["getBooks"]),
   },
 };
 </script>
